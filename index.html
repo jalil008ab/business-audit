@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing va Moliya Auditi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="container glass-panel">
+        <!-- Form Section -->
+        <div id="quiz-section">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            
+            <div id="steps-container">
+                <!-- Welcome Step -->
+                <div class="step active" data-step="0">
+                    <div class="step-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h1>Biznesingizni Audit Qilamiz</h1>
+                    <p>Ushbu qisqa so'rovnoma orqali biznesingizning marketing va moliya holatini tahlil qilamiz va aniq raqamlarga asoslangan tavsiyalar beramiz.</p>
+                    <button class="btn btn-primary next-btn">Boshlash <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Step 1 -->
+                <div class="step" data-step="1">
+                    <h2>Siz biznes egasimisiz?</h2>
+                    <div class="options-grid">
+                        <button class="option-btn" data-name="is_owner" data-value="Ha">Ha</button>
+                        <button class="option-btn" data-name="is_owner" data-value="Yo'q">Yo'q</button>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step" data-step="2">
+                    <h2>Sizda CRM tizimi mavjudmi?</h2>
+                    <p class="step-desc">Mijozlar bilan ishlash tizimi (AmoCRM, Bitrix24 va h.k.)</p>
+                    <div class="options-grid">
+                        <button class="option-btn" data-name="has_crm" data-value="Ha">Ha, mavjud</button>
+                        <button class="option-btn" data-name="has_crm" data-value="Yo'q">Yo'q</button>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step" data-step="3">
+                    <h2>Alohida sotuv bo'limi (Menejerlar) bormi?</h2>
+                    <div class="options-grid">
+                        <button class="option-btn" data-name="has_sales_dept" data-value="Ha">Ha</button>
+                        <button class="option-btn" data-name="has_sales_dept" data-value="Yo'q">Yo'q</button>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step" data-step="4">
+                    <h2>Ijtimoiy tarmoqlaringiz holati qanday?</h2>
+                    <p class="step-desc">Sahifa dizayni (Upakovka) va kontent sifati</p>
+                    <div class="options-grid">
+                        <button class="option-btn" data-name="social_state" data-value="Zo'r">Zo'r</button>
+                        <button class="option-btn" data-name="social_state" data-value="O'rtacha">O'rtacha</button>
+                        <button class="option-btn" data-name="social_state" data-value="Yomon">Yomon</button>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step" data-step="5">
+                    <h2>Biznesingiz qaysi sohada?</h2>
+                    <div class="input-group">
+                        <input type="text" id="business_field" placeholder="Masalan: Mebel, Ta'lim, Xizmat ko'rsatish...">
+                    </div>
+                    <button class="btn btn-primary submit-input-btn">Keyingisi <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="step" data-step="6">
+                    <h2>Asosiy reklama platformangiz qaysi?</h2>
+                    <div class="options-grid">
+                        <button class="option-btn" data-name="ad_platform" data-value="Instagram">Instagram</button>
+                        <button class="option-btn" data-name="ad_platform" data-value="Facebook">Facebook</button>
+                        <button class="option-btn" data-name="ad_platform" data-value="TikTok">TikTok</button>
+                        <button class="option-btn" data-name="ad_platform" data-value="Google/Yandex">Google / Yandex</button>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="step" data-step="7">
+                    <h2>Oylik DAROMAD maqsadingiz?</h2>
+                    <p class="step-desc">Qancha daromad qilmoqchisiz? (AQSh dollarida)</p>
+                    <div class="input-group">
+                        <span class="currency-prefix">$</span>
+                        <input type="number" id="revenue_goal" placeholder="10000" min="1">
+                    </div>
+                    <button class="btn btn-primary submit-input-btn">Keyingisi <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Step 8 -->
+                <div class="step" data-step="8">
+                    <h2>O'rtacha chek qancha?</h2>
+                    <p class="step-desc">Bitta mijoz o'rtacha qancha pul to'laydi? (AQSh dollarida)</p>
+                    <div class="input-group">
+                        <span class="currency-prefix">$</span>
+                        <input type="number" id="average_check" placeholder="60" min="1">
+                    </div>
+                    <button class="btn btn-primary submit-input-btn">Keyingisi <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Step 9 -->
+                <div class="step" data-step="9">
+                    <h2>Sotuv konversiyasi necha foiz?</h2>
+                    <p class="step-desc">100 ta murojaatdan (lid) nechtasi sotib oladi?</p>
+                    <div class="input-group">
+                        <input type="number" id="sales_conversion" placeholder="30" min="1" max="100">
+                        <span class="percent-suffix">%</span>
+                    </div>
+                    <button class="btn btn-primary submit-input-btn final-submit">Natijani ko'rish <i class="fa-solid fa-calculator"></i></button>
+                </div>
+
+                <!-- Loading Step -->
+                <div class="step" id="loading-step">
+                    <div class="loader"></div>
+                    <h2>Ma'lumotlar tahlil qilinmoqda...</h2>
+                    <p>Sizning moliya va marketing ma'lumotlaringiz hisoblanmoqda</p>
+                </div>
+            </div>
+            <div class="form-navigation">
+                <button class="btn btn-secondary back-btn" style="display: none;"><i class="fa-solid fa-arrow-left"></i> Orqaga</button>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard-section" class="hidden">
+            <div class="dashboard-header">
+                <h2>Marketing & Moliya Auditi</h2>
+                <button class="btn btn-secondary btn-sm" id="restart-btn"><i class="fa-solid fa-rotate-right"></i> Qayta boshlash</button>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Card 1: Financial Goals -->
+                <div class="bento-card finance-card highlight">
+                    <h3><i class="fa-solid fa-bullseye"></i> Moliyaviy Maqsad</h3>
+                    <div class="stat-large">
+                        <span class="label">Oylik Daromad</span>
+                        <div class="value" id="res_revenue">$-</div>
+                    </div>
+                    <div class="stat-row">
+                        <div class="stat-item">
+                            <span class="label">O'rtacha chek</span>
+                            <div class="value-sm" id="res_avg_check">$-</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">Kerakli mijozlar</span>
+                            <div class="value-sm highlight-text" id="res_clients">-</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Business State -->
+                <div class="bento-card state-card">
+                    <h3><i class="fa-solid fa-building"></i> Biznes Holati</h3>
+                    <ul class="state-list">
+                        <li><span>Soha:</span> <strong id="res_field">-</strong></li>
+                        <li><span>CRM:</span> <strong id="res_crm">-</strong></li>
+                        <li><span>Sotuv bo'limi:</span> <strong id="res_sales_dept">-</strong></li>
+                        <li><span>Ijtimoiy tarmoq:</span> <strong id="res_social">-</strong></li>
+                    </ul>
+                    <div class="risk-badge mt-3" id="res_risk">
+                        Xavf darajasi: <span>-</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Funnel & Leads -->
+                <div class="bento-card funnel-card">
+                    <h3><i class="fa-solid fa-filter"></i> Voronka Hisobi</h3>
+                    <div class="funnel-visual">
+                        <div class="funnel-level level-1">
+                            <span>Lidlar: <strong id="res_leads">-</strong></span>
+                        </div>
+                        <div class="funnel-level level-2">
+                            <span>Konversiya: <strong id="res_conv">-%</strong></span>
+                        </div>
+                        <div class="funnel-level level-3">
+                            <span>Mijozlar: <strong id="res_clients_2">-</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Budget Calculation -->
+                <div class="bento-card budget-card span-2">
+                    <h3><i class="fa-solid fa-wallet"></i> Reklama Byudjeti</h3>
+                    <div class="platform-info">
+                        Platforma: <strong id="res_platform">-</strong> | Lid narxi: <strong id="res_cpl">-</strong>
+                    </div>
+                    <div class="budget-stats">
+                        <div class="budget-box">
+                            <span class="label">Minimal Byudjet</span>
+                            <div class="value" id="res_min_budget">$-</div>
+                        </div>
+                        <div class="budget-box optimal">
+                            <span class="label">Optimal Byudjet</span>
+                            <div class="value" id="res_opt_budget">$-</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Warnings & Recommendations -->
+                <div class="bento-card recommendations-card">
+                    <h3><i class="fa-solid fa-lightbulb"></i> Ogohlantirishlar</h3>
+                    
+                    <div class="warnings-box" id="warnings-container">
+                        <!-- Dynamic warnings -->
+                    </div>
+
+                    <div class="tips-box" id="tips-container">
+                        <!-- Dynamic tips -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Advisor - Full Width Below Grid -->
+            <div class="ai-section">
+                <div class="bento-card ai-card">
+                    <div class="ai-header">
+                        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Biznes Maslahatchi</h3>
+                        <div class="ai-status" id="ai-status">Tahlil qilinmoqda...</div>
+                    </div>
+                    
+                    <div class="ai-content-box" id="ai-content-container">
+                        <div class="ai-loader" id="ai-loader">
+                            <div class="pulse-ring"></div>
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div class="ai-text hidden" id="ai-result-text">
+                            <!-- AI response will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

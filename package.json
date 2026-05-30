@@ -1,0 +1,14 @@
+{
+  "name": "business-audit",
+  "version": "1.0.0",
+  "description": "Marketing va Moliya Auditi loyihasi uchun Node.js Express server",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
